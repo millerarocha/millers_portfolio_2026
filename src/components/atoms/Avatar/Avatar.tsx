@@ -44,9 +44,9 @@ export function Avatar({ className, src, alt, status = 'online', withGlow = true
         />
       </div>
 
-      {/* Status Indicator */}
+      {/* Status Indicator - Hidden on desktop */}
       {status && (
-        <div className="absolute bottom-1 right-1 h-4 w-4 rounded-full bg-background-dark flex items-center justify-center">
+        <div className="absolute bottom-1 right-1 h-4 w-4 rounded-full bg-background-dark flex items-center justify-center lg:hidden">
           <div className={cn(
             "h-2.5 w-2.5 rounded-full animate-pulse",
             status === 'online' && "bg-emerald-500",

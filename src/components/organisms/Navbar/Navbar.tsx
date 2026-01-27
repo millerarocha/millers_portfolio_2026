@@ -7,7 +7,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Terminal className="text-accent w-6 h-6" />
           <h2 className="text-white text-lg font-bold tracking-tight uppercase">
-            Juan <span className="text-text-secondary font-normal">[SURNAME]</span>
+            MILLER A. <span className="text-text-secondary font-normal">ROCHA</span>
           </h2>
         </div>
         <button

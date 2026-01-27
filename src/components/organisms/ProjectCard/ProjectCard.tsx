@@ -1,5 +1,4 @@
 import { ChevronRight } from 'lucide-react'
-import { Badge } from '../../atoms/Badge'
 import { cn } from '../../../lib/utils'
 
 export interface ProjectCardProps {
@@ -8,9 +7,10 @@ export interface ProjectCardProps {
   imageUrl: string;
   category: 'HARDWARE' | 'SOFTWARE' | 'R&D';
   tags: string[];
+  onClick?: () => void;
 }
 
-export function ProjectCard({ title, description, imageUrl, category, tags }: ProjectCardProps) {
+export function ProjectCard({ title, description, imageUrl, category, onClick }: ProjectCardProps) {
   
   const categoryColors = {
     'HARDWARE': 'text-accent border-accent/20',
@@ -44,14 +44,12 @@ export function ProjectCard({ title, description, imageUrl, category, tags }: Pr
           {description}
         </p>
 
-        {/* Footer: Tags & Action */}
-        <div className="flex items-center justify-between mt-2">
-          <div className="flex gap-2">
-            {tags.map((tag) => (
-              <Badge key={tag} variant="default">{tag}</Badge>
-            ))}
-          </div>
-          <button className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+        {/* Footer: Action */}
+        <div className="flex items-center justify-end mt-2">
+          <button 
+            onClick={onClick}
+            className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
+          >
             View Case <ChevronRight className="w-4 h-4" />
           </button>
         </div>
