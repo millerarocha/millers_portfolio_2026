@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-dark text-white font-display overflow-x-hidden antialiased selection:bg-accent selection:text-background-dark;
+    min-height: max(884px, 100dvh);
+  }
+}
+
+/* Custom styles for precise details */
+.tech-border {
+  box-shadow: 0 0 0 1px rgba(146, 164, 201, 0.2);
+}
+
+.cyan-glow {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}

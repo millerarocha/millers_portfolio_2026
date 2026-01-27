@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Juan's Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "accent": "#00e5ff", // Electric Cyan
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#192233",
+                        "text-secondary": "#92a4c9",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'tech-grid': 'linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px)'
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom styles for precise details */
+        .tech-border {
+            box-shadow: 0 0 0 1px rgba(146, 164, 201, 0.2);
+        }
+
+        .cyan-glow {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-dark text-white font-display overflow-x-hidden antialiased selection:bg-accent selection:text-background-dark">
+    <!-- Main Container with Grid Overlay -->
+    <div class="relative min-h-screen w-full flex flex-col bg-background-dark bg-tech-grid bg-[size:40px_40px]">
+        <!-- Top App Bar -->
+        <header class="sticky top-0 z-50 backdrop-blur-md bg-background-dark/80 border-b border-white/5">
+            <div class="flex items-center justify-between px-5 py-4">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-accent text-2xl">terminal</span>
+                    <h2 class="text-white text-lg font-bold tracking-tight uppercase">Juan <span
+                            class="text-text-secondary font-normal">[SURNAME]</span></h2>
+                </div>
+                <button
+                    class="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded border border-text-secondary/30 text-text-secondary text-xs font-bold tracking-wide uppercase hover:border-accent hover:text-accent transition-colors">
+                    <span class="material-symbols-outlined text-sm">lock</span>
+                    Admin Login
+                </button>
+            </div>
+        </header>
+        <!-- Main Content Scrollable Area -->
+        <main class="flex-1 flex flex-col items-center w-full max-w-md mx-auto pb-10">
+            <!-- Hero Section -->
+            <section class="flex flex-col items-center w-full px-6 pt-8 pb-6 gap-6">
+                <!-- Avatar with Tech Styling -->
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary to-accent opacity-30 blur-sm group-hover:opacity-50 transition-opacity">
+                    </div>
+                    <div class="relative h-32 w-32 rounded-full p-[2px] bg-gradient-to-b from-white/20 to-transparent">
+                        <div class="h-full w-full rounded-full bg-surface-dark bg-center bg-cover bg-no-repeat border-2 border-background-dark"
+                            data-alt="Professional portrait of a 43-year-old mechatronics engineer with a confident expression"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBb12JLSiaU5yG676aIpW-SFXim0sSgW2eKsFt59hJSIfBtkrrq0vNIp50tDekfCn3gSngmsXNbQiFRSZAUdv0v0zTN9qlI91QWkXebp-C6B9srJJyo73NleDCcK7rtimV0uZ1QHPhR4grg8ZublHu-t2inGYhrMA-St1zh24efA2vrY3Bt_xuZSXyB8IXFtZt_7VnR-89BGLt6mXilMM96iy9f_VG2NZWqumqw9RqCHwvg_CTbwHhqOkwya02_yef6b2muWW5sJUqF");'>
+                        </div>
+                    </div>
+                    <!-- Status Indicator -->
+                    <div
+                        class="absolute bottom-1 right-1 h-4 w-4 rounded-full bg-background-dark flex items-center justify-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    </div>
+                </div>
+                <!-- Text Content -->
+                <div class="flex flex-col items-center text-center gap-2">
+                    <h1 class="text-3xl font-bold leading-tight tracking-tight text-white">
+                        JUAN <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-white to-text-secondary">[SURNAME]</span>
+                    </h1>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="h-px w-8 bg-accent/50"></span>
+                        <p class="text-accent text-sm font-bold tracking-wider uppercase">Mechatronics &amp; Web</p>
+                        <span class="h-px w-8 bg-accent/50"></span>
+                    </div>
+                    <p class="text-text-secondary text-base font-body leading-relaxed max-w-xs mt-2">
+                        Senior professional specializing in high-stakes projects like <strong
+                            class="text-white">INDRA/BBVA GLOMO</strong>, bridging hardware precision with software
+                        scalability.
+                    </p>
+                </div>
+                <!-- Action Buttons -->
+                <div class="flex w-full gap-3 mt-2">
+                    <button
+                        class="flex-1 flex items-center justify-center gap-2 h-12 rounded-xl bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide shadow-lg shadow-primary/20 transition-all active:scale-95">
+                        <span>View Projects</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                    <button
+                        class="flex-1 flex items-center justify-center gap-2 h-12 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white text-sm font-bold tracking-wide backdrop-blur-sm transition-all active:scale-95">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                        <span>Contact</span>
+                    </button>
+                </div>
+            </section>
+            <!-- Tech Divider -->
+            <div class="w-full px-6 flex items-center gap-4 my-2 opacity-30">
+                <div class="h-px bg-gradient-to-r from-transparent via-accent to-transparent flex-1"></div>
+                <span class="material-symbols-outlined text-accent text-sm">hub</span>
+                <div class="h-px bg-gradient-to-r from-transparent via-accent to-transparent flex-1"></div>
+            </div>
+            <!-- Selected Projects Section -->
+            <section class="w-full px-5 py-6 flex flex-col gap-5">
+                <div class="flex items-center justify-between px-1">
+                    <h3 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-accent rounded-sm"></span>
+                        Selected Projects
+                    </h3>
+                    <span class="text-xs font-mono text-text-secondary">v2.4.0</span>
+                </div>
+                <!-- Project Card 1 (Mechatronics Focus) -->
+                <div
+                    class="group relative rounded-2xl bg-surface-dark border border-white/5 overflow-hidden hover:border-primary/50 transition-colors shadow-lg">
+                    <div class="aspect-video w-full bg-cover bg-center relative"
+                        data-alt="Industrial robotic arm assembling components in a high-tech factory setting"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsTcG6T4plfzyLnkKs_NKy2EmyxdzuN9fuBdYX9QQMUCORTkBL4r2oGTHJci9i2qDFpn1slw6IqfN1xhXVe9TrH2C-v_oijfu3kJNSe2nobcVatmb4aezjgN4Q9vVUJ5UEz9LQ3A-F6XR5282KSgPqiRH2hr8eyCG42WMXhGSKIOnhA2Olb7OJ_IDoFYtOVdoF2pv5XC2xyiHy-pjwVRU0S-DA6xuLpLTh1qeRZfgGv-g8GdM3GE4w6vOtB63rrth53gFtY-QKfFlI");'>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-xs font-mono text-accent border border-accent/20">
+                            HARDWARE
+                        </div>
+                    </div>
+                    <div class="p-5 -mt-10 relative z-10">
+                        <h4 class="text-white text-lg font-bold leading-tight mb-2">Automated Sortation System</h4>
+                        <p class="text-text-secondary text-sm font-body mb-4 line-clamp-2">High-speed mechatronic
+                            integration for logistics centers using PLC control and computer vision.</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 rounded bg-white/5 text-[10px] uppercase font-bold text-text-secondary tracking-wide">PLC</span>
+                                <span
+                                    class="px-2 py-1 rounded bg-white/5 text-[10px] uppercase font-bold text-text-secondary tracking-wide">Python</span>
+                            </div>
+                            <button
+                                class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                                View Case <span class="material-symbols-outlined text-base">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 (Web/Fullstack Focus) -->
+                <div
+                    class="group relative rounded-2xl bg-surface-dark border border-white/5 overflow-hidden hover:border-primary/50 transition-colors shadow-lg">
+                    <div class="aspect-video w-full bg-cover bg-center relative"
+                        data-alt="Modern dashboard interface displaying financial data graphs on a dark screen"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA85PCPNsc0qMEq-D9asI8IKT552j3JfhYtwkGo9hSQ1bimlrIpS7BDUWd6nl_7oLIzay1sMXSX1xxK24PGHRRLaMEmd1iXTgvDGtCp6-LMYj0z3sM56PTz3YOX6aMQUOE28MEaus0KelIc1QmVG83dIHUSB6r2veu2D60lo9j9hHnqfdeUZwL4P3zBug0DnzzikBT1KnIRI8_TD7bxZY6zkw0VDK8S0LVLvw1E24d7ytebEKt3zBbK7FJYuN3cnsR3J7indpal6as2");'>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-xs font-mono text-primary border border-primary/30">
+                            SOFTWARE
+                        </div>
+                    </div>
+                    <div class="p-5 -mt-10 relative z-10">
+                        <h4 class="text-white text-lg font-bold leading-tight mb-2">INDRA/BBVA GLOMO Integration</h4>
+                        <p class="text-text-secondary text-sm font-body mb-4 line-clamp-2">Full-stack banking
+                            architecture scaling specifically for high-frequency transaction environments.</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 rounded bg-white/5 text-[10px] uppercase font-bold text-text-secondary tracking-wide">React</span>
+                                <span
+                                    class="px-2 py-1 rounded bg-white/5 text-[10px] uppercase font-bold text-text-secondary tracking-wide">Node</span>
+                            </div>
+                            <button
+                                class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                                View Case <span class="material-symbols-outlined text-base">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div
+                    class="group relative rounded-2xl bg-surface-dark border border-white/5 overflow-hidden hover:border-primary/50 transition-colors shadow-lg">
+                    <div class="aspect-video w-full bg-cover bg-center relative"
+                        data-alt="Close up of a circuit board with blue led lights"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr9WFPpUJNeyX9uxBMxu4p5rd_7t0Hg6e76gIWSbI7DtXUgMooOHgGJHJedCbSWMjoIVDdT1m2uXWfk3U4FuKL7SQSPl45FberqrUYPc8XCLhAH4RCkhX7YnuBQkTPd9F0JFGUkjt3OheWLeFppSlvYqeaPk-YpsC1mN5nLMVAeaomMCyxRTFinX-fMHr2fwSugWVn6P2FtMOEHsnlRJshLcsZ4L4uFGQB_a2-FVyDR0wZLDab5coHxSBIWBtd1SNozgxmFcq4-5Xe");'>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-xs font-mono text-accent border border-accent/20">
+                            R&amp;D
+                        </div>
+                    </div>
+                    <div class="p-5 -mt-10 relative z-10">
+                        <h4 class="text-white text-lg font-bold leading-tight mb-2">IoT Sensor Mesh</h4>
+                        <p class="text-text-secondary text-sm font-body mb-4 line-clamp-2">Developed a custom mesh
+                            network for industrial environmental monitoring.</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 rounded bg-white/5 text-[10px] uppercase font-bold text-text-secondary tracking-wide">C++</span>
+                                <span
+                                    class="px-2 py-1 rounded bg-white/5 text-[10px] uppercase font-bold text-text-secondary tracking-wide">MQTT</span>
+                            </div>
+                            <button
+                                class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                                View Case <span class="material-symbols-outlined text-base">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="mt-8 text-center px-6 pb-6">
+                <p class="text-white/20 text-xs font-mono">© 2024 Juan [Surname]. All Systems Nominal.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>
