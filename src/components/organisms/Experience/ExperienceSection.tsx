@@ -1,6 +1,6 @@
 import { SectionTitle } from '../../atoms/SectionTitle'
 import { TimelineLine } from '../../atoms/Timeline'
-import { TimelineItem, type TimelineItemProps } from '../../molecules/TimelineItem'
+import { TimelineItem } from '../../molecules/TimelineItem'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 
