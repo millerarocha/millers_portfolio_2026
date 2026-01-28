@@ -1,20 +1,8 @@
 import { SectionTitle } from '../../atoms/SectionTitle'
 import { Badge } from '../../atoms/Badge'
 
-const technologies = [
-  { name: "React", primary: true },
-  { name: "TypeScript", primary: true },
-  { name: "Next.js", primary: true },
-  { name: "Tailwind", primary: true },
-  { name: "Node.js", primary: false },
-  { name: "PostgreSQL", primary: false },
-  { name: "Supabase", primary: false },
-  { name: "Python", primary: false },
-  { name: "C++", primary: false },
-  { name: "PLC Programming", primary: false },
-  { name: "CAD Design", primary: false },
-  { name: "Industrial IoT", primary: false },
-]
+import { techStackData as technologies } from '../../../mocks/portfolio.mock'
+
 
 export function TechStack() {
   return (
