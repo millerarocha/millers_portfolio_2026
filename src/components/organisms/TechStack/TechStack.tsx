@@ -1,13 +1,14 @@
 import { SectionTitle } from '../../atoms/SectionTitle'
 import { Badge } from '../../atoms/Badge'
-
 import { techStackData as technologies } from '../../../mocks/portfolio.mock'
-
+import { useLanguage } from '../../../context/LanguageContext'
 
 export function TechStack() {
+  const { t } = useLanguage()
+
   return (
     <div className="w-full">
-      <SectionTitle>TECHNICAL ARSENAL</SectionTitle>
+      <SectionTitle>{t.sections.techStack}</SectionTitle>
       <div className="px-4">
         <div className="bg-surface-dark border border-[#2d3b54] rounded-xl p-5 shadow-lg">
           <div className="flex flex-wrap gap-3">

@@ -1,12 +1,14 @@
-import { Mail } from 'lucide-react'
 import { Button } from '../../atoms/Button'
 import { Avatar } from '../../atoms/Avatar'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export interface HeroProps {
   onContactClick?: () => void
 }
 
 export function Hero({ onContactClick }: HeroProps) {
+  const { t } = useLanguage()
+
   return (
     <section className="flex flex-col items-center w-full px-6 pt-10 pb-10 gap-8 md:gap-10">
       {/* Container for horizontal layout on desktop */}
@@ -32,24 +34,25 @@ export function Hero({ onContactClick }: HeroProps) {
             
             <div className="flex items-center gap-3 mb-2">
               <span className="h-px w-8 md:w-16 bg-accent/50"></span>
-              <p className="text-accent text-sm md:text-base lg:text-lg font-bold tracking-wider uppercase">Mechatronics Engineer & Web Developer</p>
+              <p className="text-accent text-sm md:text-base lg:text-lg font-bold tracking-wider uppercase">
+                {t.hero.role} & {t.hero.specialization}
+              </p>
               <span className="h-px w-8 md:w-16 bg-accent/50"></span>
             </div>
             
             <p className="text-text-secondary text-base md:text-lg lg:text-xl font-body leading-relaxed max-w-md md:max-w-xl lg:max-w-2xl mt-2">
-              Senior professional specializing in high-stakes projects like <strong className="text-white">INDRA/BBVA GLOMO</strong>, bridging hardware precision with software scalability.
+              {t.contact.remote}
             </p>
           </div>
 
           {/* Buttons */}
           <div className="flex w-full md:w-auto gap-4 mt-2">
             <Button 
-              className="flex-1 md:flex-none md:w-40" 
+              className="flex-1 md:flex-none md:w-48" 
               variant="glass"
               onClick={onContactClick}
             >
-              <Mail className="mr-2 w-4 h-4" />
-              <span>Contact</span>
+              <span>{t.actions.contactInfo}</span>
             </Button>
           </div>
         </div>

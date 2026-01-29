@@ -1,6 +1,6 @@
 import { X, Mail, Linkedin, Github, MapPin, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
-
+import { useLanguage } from '../../../context/LanguageContext'
 
 export interface ContactModalProps {
   isOpen: boolean
@@ -9,6 +9,7 @@ export interface ContactModalProps {
 
 export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [copied, setCopied] = useState(false)
+  const { language, t } = useLanguage()
   
   if (!isOpen) return null
 
@@ -16,7 +17,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     email: "millerarocha@gmail.com",
     linkedin: "https://www.linkedin.com/in/millerarocha/",
     github: "https://github.com/millerarocha",
-    location: "Colombia"
+    location: language === 'es' ? 'Colombia' : 'Colombia' // Location usually stays same but just in case
   }
 
   const handleCopyEmail = () => {
@@ -39,7 +40,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
       <div className="relative w-full max-w-md bg-charcoal rounded-2xl border border-accent-cyan/30 shadow-[0_0_40px_rgba(0,240,255,0.15)] flex flex-col overflow-hidden">
         {/* Header */}
         <div className="p-6 border-b border-white/10 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-white tracking-tight uppercase">Contact info</h2>
+          <h2 className="text-xl font-bold text-white tracking-tight uppercase">{t.contact.title}</h2>
           <button
             onClick={onClose}
             className="size-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors"
@@ -52,21 +53,21 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <div className="p-6 space-y-6">
           {/* Email Section */}
           <div className="space-y-3">
-            <h3 className="text-xs font-bold text-accent uppercase tracking-widest opacity-70">Direct Email</h3>
+            <h3 className="text-xs font-bold text-accent uppercase tracking-widest opacity-70">{t.contact.directEmail}</h3>
             <div className="group relative flex items-center justify-between p-4 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-colors">
               <div className="flex items-center gap-3">
                 <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs text-text-secondary">E-mail address</p>
+                  <p className="text-xs text-text-secondary">{t.contact.emailAddress}</p>
                   <p className="text-sm font-medium text-white">{contactInfo.email}</p>
                 </div>
               </div>
               <button
                 onClick={handleCopyEmail}
                 className="size-10 flex items-center justify-center rounded-lg text-text-secondary hover:text-white hover:bg-white/5 transition-all"
-                title="Copy email"
+                title={t.actions.copyEmail}
               >
                 {copied ? <Check className="w-5 h-5 text-green-400" /> : <Copy className="w-5 h-5" />}
               </button>
@@ -75,7 +76,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
           {/* Social Links */}
           <div className="space-y-3">
-            <h3 className="text-xs font-bold text-accent uppercase tracking-widest opacity-70">Social Profiles</h3>
+            <h3 className="text-xs font-bold text-accent uppercase tracking-widest opacity-70">{t.contact.socialProfiles}</h3>
             <div className="grid grid-cols-2 gap-3">
               <a
                 href={contactInfo.linkedin}
@@ -105,14 +106,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           {/* Location */}
           <div className="flex items-center gap-3 pt-2">
             <MapPin className="w-4 h-4 text-accent/50" />
-            <span className="text-sm text-text-secondary">Based in {contactInfo.location}</span>
+            <span className="text-sm text-text-secondary">{t.contact.basedIn} {contactInfo.location}</span>
           </div>
         </div>
 
         {/* Footer */}
         <div className="p-6 pt-0">
           <p className="text-[10px] text-center text-text-secondary uppercase tracking-[0.2em] opacity-40 italic">
-            Available for remote opportunities and collaborations
+            {t.contact.remote}
           </p>
         </div>
       </div>

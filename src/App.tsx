@@ -12,6 +12,8 @@ import { Footer } from './components/organisms/Footer'
 import { Linkedin } from 'lucide-react'
 import { Button } from './components/atoms/Button'
 import { useState } from 'react'
+import { LanguageProvider, useLanguage } from './context/LanguageContext'
+import { projectsData } from './mocks/portfolio.mock'
 
 // Extended interface for modal data
 export interface ExtendedProjectProps extends ProjectCardProps {
@@ -22,15 +24,20 @@ export interface ExtendedProjectProps extends ProjectCardProps {
   sourceUrl?: string
 }
 
-import { projectsData as projects } from './mocks/portfolio.mock'
-
-
-
-
-function App() {
+function PortfolioContent() {
   const [selectedProject, setSelectedProject] = useState<ExtendedProjectProps | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+  const { language, t } = useLanguage()
+
+  // Map translatable projects to current language
+  const localizedProjects = projectsData.map(p => ({
+    ...p,
+    title: p.title[language],
+    description: p.description[language],
+    overview: p.overview[language],
+    keyFeatures: p.keyFeatures[language]
+  }))
 
   const handleViewCase = (project: ExtendedProjectProps) => {
     setSelectedProject(project)
@@ -39,7 +46,6 @@ function App() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false)
-    // Delay clearing the project to allow exit animation
     setTimeout(() => setSelectedProject(null), 200)
   }
 
@@ -51,7 +57,7 @@ function App() {
         <Hero onContactClick={() => setIsContactModalOpen(true)} />
         
         <ProjectsSection 
-          projects={projects}
+          projects={localizedProjects}
           onProjectClick={handleViewCase}
         />
         
@@ -75,7 +81,7 @@ function App() {
           >
             <Button variant="primary" className="w-full h-12 gap-2 shadow-[0_0_15px_rgba(17,82,212,0.5)]">
               <Linkedin className="w-4 h-4" />
-              <span>Connect on LinkedIn</span>
+              <span>{t.hero.cta}</span>
             </Button>
           </a>
         </div>
@@ -98,6 +104,14 @@ function App() {
         onClose={() => setIsContactModalOpen(false)} 
       />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <PortfolioContent />
+    </LanguageProvider>
   )
 }
 

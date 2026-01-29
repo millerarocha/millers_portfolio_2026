@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import { cn } from '../../../lib/utils'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export interface ProjectCardProps {
   title: string;
@@ -11,6 +12,7 @@ export interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, imageUrl, category, onClick }: ProjectCardProps) {
+  const { t } = useLanguage()
   
   const categoryColors = {
     'HARDWARE': 'text-accent border-accent/20',
@@ -50,7 +52,7 @@ export function ProjectCard({ title, description, imageUrl, category, onClick }:
             onClick={onClick}
             className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
           >
-            View Case <ChevronRight className="w-4 h-4" />
+            {t.actions.viewCase} <ChevronRight className="w-4 h-4" />
           </button>
         </div>
       </div>

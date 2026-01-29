@@ -1,6 +1,7 @@
 import { X, ExternalLink, Terminal, CheckCircle2 } from 'lucide-react'
 import { Badge } from '../../atoms/Badge'
 import { cn } from '../../../lib/utils'
+import { useLanguage } from '../../../context/LanguageContext'
 
 export interface ProjectDetailModalProps {
   isOpen: boolean
@@ -20,6 +21,8 @@ export interface ProjectDetailModalProps {
 }
 
 export function ProjectDetailModal({ isOpen, onClose, project }: ProjectDetailModalProps) {
+  const { t } = useLanguage()
+
   if (!isOpen) return null
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -72,7 +75,7 @@ export function ProjectDetailModal({ isOpen, onClose, project }: ProjectDetailMo
           {/* Overview */}
           <div className="mb-8">
             <h3 className="text-white text-xs font-bold tracking-widest uppercase mb-3 opacity-60">
-              Overview
+              {t.projectModal.overview}
             </h3>
             <p className="text-text-secondary leading-relaxed font-body text-sm">
               {project.overview}
@@ -82,7 +85,7 @@ export function ProjectDetailModal({ isOpen, onClose, project }: ProjectDetailMo
           {/* Technical Stack */}
           <div className="mb-8">
             <h3 className="text-white text-xs font-bold tracking-widest uppercase mb-3 opacity-60">
-              Technical Stack
+              {t.projectModal.technicalStack}
             </h3>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, index) => (
@@ -99,7 +102,7 @@ export function ProjectDetailModal({ isOpen, onClose, project }: ProjectDetailMo
           {/* Key Features */}
           <div className="mb-8">
             <h3 className="text-white text-xs font-bold tracking-widest uppercase mb-3 opacity-60">
-              Key Features
+              {t.projectModal.keyFeatures}
             </h3>
             <ul className="space-y-3">
               {project.keyFeatures.map((feature, index) => (
@@ -127,7 +130,7 @@ export function ProjectDetailModal({ isOpen, onClose, project }: ProjectDetailMo
               )}
             >
               <ExternalLink className="mr-2 w-5 h-5" />
-              Visit Live Site
+              {t.projectModal.visitLive}
             </a>
           )}
           {project.sourceUrl && (
@@ -142,7 +145,7 @@ export function ProjectDetailModal({ isOpen, onClose, project }: ProjectDetailMo
               )}
             >
               <Terminal className="mr-2 w-5 h-5" />
-              View Source Code
+              {t.projectModal.viewSource}
             </a>
           )}
         </div>

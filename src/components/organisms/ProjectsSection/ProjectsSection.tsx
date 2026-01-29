@@ -3,6 +3,7 @@ import type { ExtendedProjectProps } from '../../../App'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '../../../context/LanguageContext'
 
 interface ProjectsSectionProps {
   projects: ExtendedProjectProps[]
@@ -13,6 +14,7 @@ const INITIAL_DISPLAY_COUNT = 3
 
 export function ProjectsSection({ projects, onProjectClick }: ProjectsSectionProps) {
   const [showAll, setShowAll] = useState(false)
+  const { t } = useLanguage()
   
   const hasMore = projects.length > INITIAL_DISPLAY_COUNT
 
@@ -21,7 +23,7 @@ export function ProjectsSection({ projects, onProjectClick }: ProjectsSectionPro
       <div className="flex items-center justify-between px-1">
         <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
           <span className="w-1.5 h-6 bg-accent rounded-sm"></span>
-          Selected Projects
+          {t.sections.projects}
         </h3>
         <span className="text-xs font-mono text-text-secondary">v2.4.0</span>
       </div>
@@ -37,7 +39,7 @@ export function ProjectsSection({ projects, onProjectClick }: ProjectsSectionPro
         ))}
 
         {/* Expandable projects container */}
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {showAll && (
             <motion.div
               layout
@@ -71,12 +73,12 @@ export function ProjectsSection({ projects, onProjectClick }: ProjectsSectionPro
             {showAll ? (
               <>
                 <ChevronUp className="w-4 h-4" />
-                Show Less
+                {t.actions.showLess}
               </>
             ) : (
               <>
                 <ChevronDown className="w-4 h-4" />
-                Show More ({projects.length - INITIAL_DISPLAY_COUNT} more)
+                {t.actions.showMore} ({projects.length - INITIAL_DISPLAY_COUNT} {t.actions.more})
               </>
             )}
           </button>
