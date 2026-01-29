@@ -163,88 +163,106 @@ export const techStackData = [
 
 export const projectsData: ExtendedProjectProps[] = [
   {
-    title: "Automated Sortation System",
-    description: "High-speed mechatronic integration for logistics centers using PLC control and computer vision.",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBsTcG6T4plfzyLnkKs_NKy2EmyxdzuN9fuBdYX9QQMUCORTkBL4r2oGTHJci9i2qDFpn1slw6IqfN1xhXVe9TrH2C-v_oijfu3kJNSe2nobcVatmb4aezjgN4Q9vVUJ5UEz9LQ3A-F6XR5282KSgPqiRH2hr8eyCG42WMXhGSKIOnhA2Olb7OJ_IDoFYtOVdoF2pv5XC2xyiHy-pjwVRU0S-DA6xuLpLTh1qeRZfgGv-g8GdM3GE4w6vOtB63rrth53gFtY-QKfFlI",
-    category: "HARDWARE",
-    tags: ["PLC", "PYTHON", "COMPUTER VISION", "SCADA"],
-    overview: "Designed and deployed an automated sortation system for a high-throughput logistics center. The system processes over 10,000 packages per hour using PLC-controlled conveyors and computer vision for barcode scanning. Integration with existing WMS infrastructure required custom SCADA protocols and real-time data synchronization.",
-    keyFeatures: [
-      "Real-time package tracking with sub-second latency.",
-      "Computer vision-based barcode recognition with 99.8% accuracy.",
-      "Fault-tolerant PLC architecture with redundant controllers.",
-      "Custom SCADA dashboard for operator monitoring and control."
-    ],
-    date: "Mar 2024",
-    liveUrl: undefined,
-    sourceUrl: undefined
-  },
-  {
-    title: "INDRA/BBVA GLOMO Integration",
-    description: "Full-stack banking architecture scaling specifically for high-frequency transaction environments.",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA85PCPNsc0qMEq-D9asI8IKT552j3JfhYtwkGo9hSQ1bimlrIpS7BDUWd6nl_7oLIzay1sMXSX1xxK24PGHRRLaMEmd1iXTgvDGtCp6-LMYj0z3sM56PTz3YOX6aMQUOE28MEaus0KelIc1QmVG83dIHUSB6r2veu2D60lo9j9hHnqfdeUZwL4P3zBug0DnzzikBT1KnIRI8_TD7bxZY6zkw0VDK8S0LVLvw1E24d7ytebEKt3zBbK7FJYuN3cnsR3J7indpal6as2",
+    title: "BBVA GLOMOCO UI Engine",
+    description: "High-performance UI engine for global banking, built with Web Components and Cells Framework.",
+    imageUrl: "/assets/images/projects/bbva_glomo_ui_engine_1769651960654.png",
     category: "SOFTWARE",
-    tags: ["REACT", "NODE", "POSTGRESQL", "MICROSERVICES"],
-    overview: "Architected and implemented a full-stack banking integration platform for BBVA's GLOMO system. The solution handles high-frequency transaction processing with strict compliance requirements. Built using a microservices architecture with React frontend, Node.js backend, and PostgreSQL database cluster for data persistence.",
+    tags: ["CELLS", "LITELEMENT", "WEB COMPONENTS", "FINTECH"],
+    overview: "Architected and developed the frontend core for BBVA's global mobile app (GLOMOCO). Utilized the Cells framework and LitElement to create a robust, scalable, and reusable library of Web Components, ensuring consistent UI/UX across multiple regions and banking features.",
     keyFeatures: [
-      "Microservices architecture supporting 50,000+ transactions per minute.",
-      "Real-time fraud detection using machine learning models.",
-      "Multi-region deployment with active-active failover.",
-      "Comprehensive audit logging for regulatory compliance."
+      "Micro-frontend architecture using Cells Framework.",
+      "High-performance Web Components with LitElement.",
+      "Strict compliance with accessibility and banking security standards.",
+      "Modular design system for global scalability."
     ],
-    date: "Jan 2024",
+    date: "Aug 2024",
     liveUrl: undefined,
     sourceUrl: undefined
   },
   {
-    title: "IoT Sensor Mesh",
-    description: "Developed a custom mesh network for industrial environmental monitoring.",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCr9WFPpUJNeyX9uxBMxu4p5rd_7t0Hg6e76gIWSbI7DtXUgMooOHgGJHJedCbSWMjoIVDdT1m2uXWfk3U4FuKL7SQSPl45FberqrUYPc8XCLhAH4RCkhX7YnuBQkTPd9F0JFGUkjt3OheWLeFppSlvYqeaPk-YpsC1mN5nLMVAeaomMCyxRTFinX-fMHr2fwSugWVn6P2FtMOEHsnlRJshLcsZ4L4uFGQB_a2-FVyDR0wZLDab5coHxSBIWBtd1SNozgxmFcq4-5Xe",
+    title: "Autonomous Exploration UAV",
+    description: "Patented unmanned aerial vehicle designed for navigation and exploration in complex terrains.",
+    imageUrl: "/assets/images/projects/patented_uav_exploration_1769651973750.png",
     category: "R&D",
-    tags: ["C++", "MQTT", "ESP32", "ZIGBEE"],
-    overview: "Engineered a custom IoT mesh network for industrial environmental monitoring across a 50,000 sq ft manufacturing facility. The system uses ESP32-based sensor nodes communicating via Zigbee mesh protocol, with MQTT gateway for cloud integration. Low-power design enables 2+ years of battery life per node.",
+    tags: ["MECHATRONICS", "DRONES", "PATENT", "EMBEDDED"],
+    overview: "Led the research and development of a custom UAV for exploration. This project resulted in a Utility Model Patent (No. 47453). The work involved aerodynamics design, flight control optimization, and the integration of multiple sensors for autonomous environmental mapping.",
     keyFeatures: [
-      "Self-healing mesh network with automatic node discovery.",
-      "Ultra-low power consumption (< 50µA in sleep mode).",
-      "Real-time alerting for temperature, humidity, and air quality thresholds.",
-      "Scalable architecture supporting 500+ sensor nodes."
+      "Utility Model Patent No. 47453 for innovative UAV design.",
+      "Custom PID flight control systems and sensor fusion.",
+      "Autonomous navigation in GPS-denied environments.",
+      "Lightweight carbon-fiber structural engineering."
     ],
-    date: "Nov 2023",
+    date: "Dec 2015",
     liveUrl: undefined,
     sourceUrl: undefined
   },
   {
-    title: "Edge Computing Gateway",
-    description: "High-performance gateway for local processing of industrial data streams.",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA85PCPNsc0qMEq-D9asI8IKT552j3JfhYtwkGo9hSQ1bimlrIpS7BDUWd6nl_7oLIzay1sMXSX1xxK24PGHRRLaMEmd1iXTgvDGtCp6-LMYj0z3sM56PTz3YOX6aMQUOE28MEaus0KelIc1QmVG83dIHUSB6r2veu2D60lo9j9hHnqfdeUZwL4P3zBug0DnzzikBT1KnIRI8_TD7bxZY6zkw0VDK8S0LVLvw1E24d7ytebEKt3zBbK7FJYuN3cnsR3J7indpal6as2",
+    title: "Industrial AMR Systems",
+    description: "Deployment of Automated Meter Reading systems for large-scale utility monitoring.",
+    imageUrl: "/assets/images/projects/industrial_amr_iot_1769651988018.png",
     category: "HARDWARE",
-    tags: ["LINUX", "DOCKER", "C++", "RUST"],
-    overview: "Developed a robust edge computing gateway capable of local data aggregation, filtering, and analysis for mission-critical industrial applications. This reduces cloud bandwidth costs and ensures low-latency response times for safety-critical systems.",
+    tags: ["LABVIEW", "SCADA", "SQL", "IOT"],
+    overview: "Developed and deployed smart monitoring solutions for water and electrical utility meters. Used LabVIEW for test bench automation and high-speed data acquisition. Integrated SQL databases for real-time tracking of thousands of devices across the grid.",
     keyFeatures: [
-      "Containerized application deployment via Docker.",
-      "Hardware-accelerated data encryption and security.",
-      "Local AI inference at the edge for anomaly detection.",
-      "Seamless integration with major cloud providers (AWS, Azure, GCP)."
+      "Automated test benches with LabVIEW and NI Hardware.",
+      "High-throughput data logging with SQL integration.",
+      "Real-time SCADA dashboards for utility tracking.",
+      "Edge processing for water meter accuracy calibration."
     ],
-    date: "Sep 2023",
+    date: "Apr 2010",
     liveUrl: undefined,
     sourceUrl: undefined
   },
   {
-    title: "Eco-Monitoring Station",
-    description: "Solar-powered environmental monitoring station for remote desert deployments.",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBsTcG6T4plfzyLnkKs_NKy2EmyxdzuN9fuBdYX9QQMUCORTkBL4r2oGTHJci9i2qDFpn1slw6IqfN1xhXVe9TrH2C-v_oijfu3kJNSe2nobcVatmb4aezjgN4Q9vVUJ5UEz9LQ3A-F6XR5282KSgPqiRH2hr8eyCG42WMXhGSKIOnhA2Olb7OJ_IDoFYtOVdoF2pv5XC2xyiHy-pjwVRU0S-DA6xuLpLTh1qeRZfgGv-g8GdM3GE4w6vOtB63rrth53gFtY-QKfFlI",
-    category: "R&D",
-    tags: ["SOLAR", "LORA", "SENSORS", "C++"],
-    overview: "Designed and prototyped a fully autonomous, solar-powered monitoring station optimized for extreme desert environments. Utilizes LoRaWAN for long-range communication and features custom-built sensors for soil moisture, wind speed, and solar irradiance.",
+    title: "Robotic Soccer Team (AI)",
+    description: "Autonomous mechatronic team designed for competitive robotic sports using embedded AI.",
+    imageUrl: "/assets/images/projects/robotic_soccer_team_ai_1769652001726.png",
+    category: "HARDWARE",
+    tags: ["PIC", "C++", "ROBOTICS", "COMPUTER VISION"],
+    overview: "Engineered a team of autonomous mobile robots to compete in robotic soccer. Developed custom electronics using PIC microcontrollers and implemented AI algorithms in C++ for real-time strategy, ball tracking, and team coordination.",
     keyFeatures: [
-      "Energy-independent operation with solar tracking capability.",
-      "LoRaWAN connectivity with 10km+ range in rural areas.",
-      "Rugged, IP67-rated enclosure for sand and heat protection.",
-      "Integrated web-based telemetry dashboard with geospatial visualization."
+      "Embedded AI for real-time decision making and coordination.",
+      "Custom PCB design and microcontroller programming (PIC).",
+      "Computer vision integration for position and object tracking.",
+      "High-speed motor control and collision avoidance."
     ],
-    date: "Jul 2023",
+    date: "Jun 2005",
+    liveUrl: undefined,
+    sourceUrl: undefined
+  },
+  {
+    title: "Pneumatic Sorting Arm",
+    description: "Industrial robot arm for automated waste separation using high-speed pneumatics and PLC.",
+    imageUrl: "/assets/images/projects/pneumatic_sorting_robot_arm_1769652015424.png",
+    category: "HARDWARE",
+    tags: ["PLC SIEMENS", "PNEUMATICS", "HMI", "FACTORY"],
+    overview: "Designed a pneumatic robotic system for the automated separation of plastic waste. Powered by Siemens PLC systems, the project improved efficiency in recycling processes through high-speed object recognition and sorting.",
+    keyFeatures: [
+      "PLC-based sequences for synchronized pneumatic movement.",
+      "HMI design for system monitoring and manual override.",
+      "Integration with industrial sensors for material detection.",
+      "Robust mechanical design for 24/7 industrial environments."
+    ],
+    date: "Aug 2008",
+    liveUrl: undefined,
+    sourceUrl: undefined
+  },
+  {
+    title: "IoT Industrial Mesh",
+    description: "Distributed diagnostic network for heavy machinery alarm monitoring and diagnostics.",
+    imageUrl: "/assets/images/projects/iot_industrial_mesh_network_1769652033221.png",
+    category: "HARDWARE",
+    tags: ["ESP32", "MQTT", "RASPBERRY PI", "MESH"],
+    overview: "Created a low-cost, high-reliability mesh network using ESP32 nodes to monitor environmental conditions and machinery health in a manufacturing facility. Data was aggregated into a central Raspberry Pi gateway and visualized via MQTT dashboards.",
+    keyFeatures: [
+      "Self-healing mesh network architecture for industrial resilience.",
+      "Real-time MQTT telemetry and machinery health alerts.",
+      "Low-power sensor integration for remote nodes.",
+      "Custom Node-RED dashboards for plant operators."
+    ],
+    date: "Jan 2022",
     liveUrl: undefined,
     sourceUrl: undefined
   }
 ]
+
