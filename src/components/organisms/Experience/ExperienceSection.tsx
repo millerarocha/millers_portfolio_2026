@@ -23,17 +23,17 @@ export function ExperienceSection() {
           <TimelineLine />
           {displayedExperience.map((item, index) => (
             <TimelineItem key={index} {...item} />
-          ))}
+          ))}          
         </div>
 
         {/* Show More/Less Button */}
-        {hasMore && (
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 transition-all font-medium text-sm"
-            >
-              {showAll ? (
+         {hasMore && (
+           <div className="mt-8 flex justify-center">
+              <button
+               onClick={() => setShowAll(!showAll)}
+               className="flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 transition-all font-medium text-sm"
+             >
+                 {showAll ? (
                 <>
                   <ChevronUp className="w-4 h-4" />
                   Show Less

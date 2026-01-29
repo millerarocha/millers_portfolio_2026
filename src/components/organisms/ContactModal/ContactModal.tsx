@@ -13,8 +13,8 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   if (!isOpen) return null
 
   const contactInfo = {
-    email: "miller.rocha@example.com", // Replace with real email if provided
-    linkedin: "https://www.linkedin.com/in/miller-rocha/",
+    email: "millerarocha@gmail.com",
+    linkedin: "https://www.linkedin.com/in/millerarocha/",
     github: "https://github.com/millerarocha",
     location: "Colombia"
   }

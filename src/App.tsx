@@ -9,7 +9,7 @@ import { ProjectsSection } from './components/organisms/ProjectsSection'
 import { ContactModal } from './components/organisms/ContactModal'
 import { type ProjectCardProps } from './components/organisms/ProjectCard'
 import { Footer } from './components/organisms/Footer'
-import { Download } from 'lucide-react'
+import { Linkedin } from 'lucide-react'
 import { Button } from './components/atoms/Button'
 import { useState } from 'react'
 
@@ -67,10 +67,17 @@ function App() {
         
         {/* Bottom CTA */}
         <div className="w-full px-4 pt-4 max-w-2xl mx-auto">
-          <Button variant="primary" className="w-full h-12 gap-2 shadow-[0_0_15px_rgba(17,82,212,0.5)]">
-            <Download className="w-4 h-4" />
-            Download Resume (PDF)
-          </Button>
+          <a 
+            href="https://www.linkedin.com/in/millerarocha/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
+            <Button variant="primary" className="w-full h-12 gap-2 shadow-[0_0_15px_rgba(17,82,212,0.5)]">
+              <Linkedin className="w-4 h-4" />
+              <span>Connect on LinkedIn</span>
+            </Button>
+          </a>
         </div>
 
         <Footer />

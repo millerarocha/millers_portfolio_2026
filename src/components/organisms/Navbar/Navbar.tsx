@@ -1,4 +1,4 @@
-import { Terminal, Lock } from 'lucide-react'
+import { Terminal } from 'lucide-react'
 
 export function Navbar() {
   return (
@@ -10,11 +10,6 @@ export function Navbar() {
             MILLER A. <span className="text-text-secondary font-normal">ROCHA</span>
           </h2>
         </div>
-        <button
-          className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded border border-text-secondary/30 text-text-secondary text-xs font-bold tracking-wide uppercase hover:border-accent hover:text-accent transition-colors">
-          <Lock className="w-3 h-3" />
-          Admin Login
-        </button>
       </div>
     </header>
   )
