@@ -2,6 +2,7 @@ import { ProjectCard } from '../ProjectCard'
 import type { ExtendedProjectProps } from '../../../App'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface ProjectsSectionProps {
   projects: ExtendedProjectProps[]
@@ -13,7 +14,6 @@ const INITIAL_DISPLAY_COUNT = 3
 export function ProjectsSection({ projects, onProjectClick }: ProjectsSectionProps) {
   const [showAll, setShowAll] = useState(false)
   
-  const displayedProjects = showAll ? projects : projects.slice(0, INITIAL_DISPLAY_COUNT)
   const hasMore = projects.length > INITIAL_DISPLAY_COUNT
 
   return (
@@ -27,13 +27,38 @@ export function ProjectsSection({ projects, onProjectClick }: ProjectsSectionPro
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {displayedProjects.map((project, index) => (
+        {/* Initial projects */}
+        {projects.slice(0, INITIAL_DISPLAY_COUNT).map((project, index) => (
           <ProjectCard 
             key={index} 
             {...project}
             onClick={() => onProjectClick(project)}
           />
         ))}
+
+        {/* Expandable projects container */}
+        <AnimatePresence>
+          {showAll && (
+            <motion.div
+              layout
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="col-span-1 md:col-span-2 lg:col-span-3 overflow-hidden"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-5">
+                {projects.slice(INITIAL_DISPLAY_COUNT).map((project, index) => (
+                  <ProjectCard 
+                    key={index + INITIAL_DISPLAY_COUNT} 
+                    {...project}
+                    onClick={() => onProjectClick(project)}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Show More/Less Button */}
