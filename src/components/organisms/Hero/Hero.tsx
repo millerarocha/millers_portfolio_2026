@@ -33,22 +33,22 @@ export function Hero({ onContactClick }: HeroProps) {
             </h1>
             
             <div className="flex items-center gap-3 mb-2">
-              <span className="h-px w-8 md:w-16 bg-accent/50"></span>
-              <p className="text-accent text-sm md:text-base lg:text-lg font-bold tracking-wider uppercase">
-                {t.hero.role} & {t.hero.specialization}
+              <span className="h-px w-12 bg-accent/50"></span>
+              <p className="text-accent text-sm md:text-base lg:text-lg font-bold tracking-widest uppercase">
+                {t.hero.role} • {t.hero.specialization}
               </p>
-              <span className="h-px w-8 md:w-16 bg-accent/50"></span>
+              <span className="h-px w-12 bg-accent/50"></span>
             </div>
             
-            <p className="text-text-secondary text-base md:text-lg lg:text-xl font-body leading-relaxed max-w-md md:max-w-xl lg:max-w-2xl mt-2">
-              {t.contact.remote}
+            <p className="text-text-secondary text-lg md:text-xl lg:text-2xl font-body leading-relaxed max-w-2xl mt-4 border-l-2 border-primary/20 pl-6 italic">
+              {t.hero.description}
             </p>
           </div>
 
           {/* Buttons */}
-          <div className="flex w-full md:w-auto gap-4 mt-2">
+          <div className="flex w-full md:w-auto gap-4 mt-8">
             <Button 
-              className="flex-1 md:flex-none md:w-48" 
+              className="flex-1 md:flex-none md:min-w-[240px] h-14 text-base md:text-lg px-8 font-bold tracking-wide shadow-[0_0_30px_rgba(17,82,212,0.3)] transition-all hover:scale-105" 
               variant="glass"
               onClick={onContactClick}
             >

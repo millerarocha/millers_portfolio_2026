@@ -5,6 +5,8 @@ export const translations = {
     hero: {
       role: "Mechatronics Engineer",
       specialization: "Web Developer",
+      tagline: "MILLER A., ROCHA",
+      description: "Proven track record in high-stakes mechatronic systems and global fintech infrastructures like BBVA & Hourly.io. I bridge the gap between hardware precision and large-scale software performance.",
       location: "Based in Colombia",
       cta: "Connect on LinkedIn",
     },
@@ -39,13 +41,15 @@ export const translations = {
       viewSource: "View Source Code",
     },
     footer: {
-      learnInMotion: "Learn In Motion",
+      learnInMotion: "Unilim - Learn In Motion",
     }
   },
   es: {
     hero: {
       role: "Ingeniero Mecatrónico",
       specialization: "Desarrollador Web",
+      tagline: "MILLER A., ROCHA",
+      description: "Experiencia comprobada en sistemas mecatrónicos de alto nivel e infraestructuras fintech globales como BBVA y Hourly.io. Uniendo la precisión del hardware con el rendimiento de software a gran escala.",
       location: "Basado en Colombia",
       cta: "Conectar en LinkedIn",
     },
@@ -80,7 +84,7 @@ export const translations = {
       viewSource: "Ver código fuente",
     },
     footer: {
-      learnInMotion: "Aprender en Movimiento",
+      learnInMotion: "Unilim - Aprender en Movimiento",
     }
   }
 }
