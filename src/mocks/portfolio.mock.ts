@@ -235,7 +235,7 @@ export const projectsData: TranslatableProject[] = [
       en: "High-performance UI engine for global banking, built with Web Components and Cells Framework.",
       es: "Motor de UI de alto rendimiento para banca global, construido con Web Components y el Framework Cells."
     },
-    imageUrl: "/assets/images/projects/bbva_app.png",
+    imageUrl: "assets/images/projects/bbva_app.png",
     category: "SOFTWARE",
     tags: ["CELLS", "LITELEMENT", "VERIDAS", "DVSEXPRESS", "FINTECH"],
     overview: {
@@ -268,7 +268,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Enterprise-grade payroll and workers' comp system for high-risk industries.",
       es: "Sistema de nómina y compensación de trabajadores de nivel empresarial para industrias de alto riesgo."
     },
-    imageUrl: "/assets/images/projects/hourly%20app.png",
+    imageUrl: "assets/images/projects/hourly%20app.png",
     category: "SOFTWARE",
     tags: ["REACT", "REACT-ARIA", "RETOOL", "PAYROLL", "INSURANCE"],
     overview: {
@@ -301,7 +301,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Mechatronic systems for rocket instrumentation and wind tunnel aerospace testing at Uniandes.",
       es: "Sistemas mecatrónicos para instrumentación de cohetes y pruebas aeroespaciales en túnel de viento en Uniandes."
     },
-    imageUrl: "/assets/images/projects/miller_pua_uniandes.jpg",
+    imageUrl: "assets/images/projects/miller_pua_uniandes.jpg",
     category: "R&D",
     tags: ["LABVIEW", "ARDUINO", "PUA PROJECT", "AEROSPACE", "INSTRUMENTATION"],
     overview: {
@@ -334,7 +334,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Oversight of critical systems installation and testing at Floreña and Cusiana O&G facilities.",
       es: "Supervisión de la instalación y pruebas de sistemas críticos en las instalaciones de O&G de Floreña y Cusiana."
     },
-    imageUrl: "/assets/images/projects/miller_oil_gas.jpg",
+    imageUrl: "assets/images/projects/miller_oil_gas.jpg",
     category: "HARDWARE",
     tags: ["INSTRUMENTATION", "CONTROL SYSTEMS", "OIL & GAS", "COMMISSIONING", "SAFETY"],
     overview: {
@@ -367,7 +367,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Patented fixed-wing UAV designed for navigation and exploration in complex terrains.",
       es: "Vehículo aéreo no tripulado de ala fija patentado diseñado para la navegación y exploración en terrenos complejos."
     },
-    imageUrl: "/assets/images/projects/uav_umng_2015.jpg",
+    imageUrl: "assets/images/projects/uav_umng_2015.jpg",
     category: "R&D",
     tags: ["MECHATRONICS", "AERODYNAMICS", "PATENT", "MATLAB", "ANSYS"],
     overview: {
@@ -400,7 +400,7 @@ export const projectsData: TranslatableProject[] = [
       en: "SCADA system for automated water meter test benches using LabVIEW and National Instruments.",
       es: "Sistema SCADA para bancos de prueba de medidores de agua automatizados utilizando LabVIEW y National Instruments."
     },
-    imageUrl: "/assets/images/projects/scada_automated_water_bench.png",
+    imageUrl: "assets/images/projects/scada_automated_water_bench.png",
     category: "SOFTWARE",
     tags: ["LABVIEW", "NATIONAL INSTRUMENTS", "SCADA", "SQL", "AUTOMATION"],
     overview: {
@@ -433,7 +433,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Industrial robot arm for automated waste separation using high-speed pneumatics and PLC.",
       es: "Brazo robótico industrial para la separación automatizada de residuos utilizando neumática de alta velocidad y PLC."
     },
-    imageUrl: "/assets/images/projects/pneumatic_sorting_robot_arm_1769652015424.png",
+    imageUrl: "assets/images/projects/pneumatic_sorting_robot_arm_1769652015424.png",
     category: "HARDWARE",
     tags: ["PLC SIEMENS", "PNEUMATICS", "HMI", "FACTORY"],
     overview: {
@@ -464,7 +464,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Autonomous mechatronic team designed for competitive robotic sports using embedded AI.",
       es: "Equipo mecatrónico autónomo diseñado para deportes robóticos competitivos utilizando IA embebida."
     },
-    imageUrl: "/assets/images/projects/robotic_soccer_team_ai_1769652001726.png",
+    imageUrl: "assets/images/projects/robotic_soccer_team_ai_1769652001726.png",
     category: "HARDWARE",
     tags: ["PIC", "C++", "ROBOTICS", "COMPUTER VISION"],
     overview: {
@@ -495,7 +495,7 @@ export const projectsData: TranslatableProject[] = [
       en: "Educational robot presented at the National Robotics Fair in Maloka, teaching the Police Code.",
       es: "Robot educativo presentado en la Feria Nacional de Robótica en Maloka, enseñando el Código de Policía."
     },
-    imageUrl: "/assets/images/projects/maloka_robocivic_project.png",
+    imageUrl: "assets/images/projects/maloka_robocivic_project.png",
     category: "HARDWARE",
     tags: ["ROBOTICS", "EDUCATION", "MALOKA", "EMBEDDED"],
     overview: {

@@ -17,7 +17,7 @@ export function Hero({ onContactClick }: HeroProps) {
         {/* Avatar - Larger on desktop */}
         <div className="shrink-0">
           <Avatar 
-            src="/assets/images/profile.jpg"
+            src="assets/images/profile.jpg"
             alt="Miller's Profile"
             status="online"
             className="h-32 w-32 md:h-40 md:w-40 lg:h-64 lg:w-64"
